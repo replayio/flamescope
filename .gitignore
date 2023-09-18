@@ -7,3 +7,6 @@ examples/*
 !examples/perf.test01
 .pytest_cache/
 app/public/*
+bin/*
+lib/*
+pyvenv.cfg
