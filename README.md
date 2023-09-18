@@ -28,7 +28,7 @@ $ python run.py
 
 (Note python3 is assumed, python2 _may_ work)
 
-Then browse to http://127.0.0.1:5000/, and you can begin exploring profiles from the `examples` directory. You can add new profiles to that directory, collected using Linux `perf`. Here are instructions for a generic CPU profile at 49 Hertz for 120 seconds:
+Then browse to http://127.0.0.1:10001/, and you can begin exploring profiles from the `examples` directory. You can add new profiles to that directory, collected using Linux `perf`. Here are instructions for a generic CPU profile at 49 Hertz for 120 seconds:
 
 ```bash
 $ sudo perf record -F 49 -a -g -- sleep 120
@@ -56,7 +56,7 @@ FlameScope configuration file can be found in `app/config.py`.
 DEBUG = True # run the web server in debug mode
 PROFILE_DIR = 'examples' # path where flamescope will look for profiles
 HOST = '127.0.0.1' # web server host
-PORT = 5000 # web server port
+PORT = 10001 # web server port
 JSONIFY_PRETTYPRINT_REGULAR = False # pretty print api json responses
 ```
 
@@ -90,13 +90,13 @@ $ cd flamescope
 $ docker build -t flamescope .
 ```
 
-The container expects the profiles to be bind-mounted into `/profiles` and listens on port 5000. To view profiles from `/tmp/profiles`, start the container with the following command:
+The container expects the profiles to be bind-mounted into `/profiles` and listens on port 10001. To view profiles from `/tmp/profiles`, start the container with the following command:
 
 ```
-$ docker run --rm -it -v /tmp/profiles:/profiles:ro -p 5000:5000 flamescope
+$ docker run --rm -it -v /tmp/profiles:/profiles:ro -p 10001:10001 flamescope
 ```
 
-Then access FlameScope on [http://127.0.0.1:5000](http://127.0.0.1:5000/)
+Then access FlameScope on [http://127.0.0.1:10001](http://127.0.0.1:10001/)
 
 ## References
 

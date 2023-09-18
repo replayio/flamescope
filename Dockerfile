@@ -22,4 +22,4 @@ RUN apk add libmagic npm nodejs && \
 
 WORKDIR "/app"
 ENTRYPOINT ["python", "run.py"]
-EXPOSE 5000/tcp
+EXPOSE 10001/tcp
