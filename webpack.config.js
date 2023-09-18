@@ -75,19 +75,19 @@ const config = {
   devServer: {
     proxy: {
       '/profile/**': {
-        target: 'http://localhost:5000',
+        target: 'http://127.0.0.1:5000',
       },
       '/heatmap/**': {
-        target: 'http://localhost:5000',
+        target: 'http://127.0.0.1:5000',
       },
       '/flamegraph/**': {
-        target: 'http://localhost:5000',
+        target: 'http://127.0.0.1:5000',
       },
       '/differential/**': {
-        target: 'http://localhost:5000',
+        target: 'http://127.0.0.1:5000',
       },
       '/elided/**': {
-        target: 'http://localhost:5000',
+        target: 'http://127.0.0.1:5000',
       },
     },
   },
